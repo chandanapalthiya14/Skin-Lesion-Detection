@@ -1,10 +1,10 @@
-Skin Lesion Classification using Deep Learning
+#### skin Lesion Classification using Deep Learning
 
-Project Description
+### Project Description
 
 This project implements a deep learning-based computer vision system to automatically classify skin lesions from dermoscopic images. It aims to assist in early detection of skin cancer (e.g., melanoma) using Convolutional Neural Networks (CNNs) and transfer learning.
 
-Features
+### Features
 
 Classifies skin lesions into multiple categories (benign vs malignant or multiple types).
 
@@ -16,7 +16,7 @@ Provides Grad-CAM visualization to highlight areas influencing predictions.
 
 Optionally deployable as a Flask web application.
 
-Dataset
+### Dataset
 
 HAM10000 / ISIC 2018/2020 datasets
 
@@ -70,7 +70,7 @@ Focal loss function was applied instead of the categorical cross_entropy to impr
 
         Xception + Dropout + Augmentation + class_weights + soft attention + focal loss (Xception3)
 
-Technologies Used
+### Technologies Used
 
 Python
 
@@ -84,11 +84,11 @@ Google Colab (optional for free GPU)
 
 Flask (optional for deployment)
 
-Results:
+### Results:
 
 After training and evaluating both models, the Xception model (Xception3) outperformed all the other models, achieving a higher accuracy of 85.7% average f1-score of  0.72 This indicates that the pre-trained Xception model, with its advanced architecture, numerous layers, focal loss, dropouts, augmentation and class-weighted is better suited for image classification tasks such as this one.
 
-Future Work
+### Future Work
 
 Multi-class classification for all lesion types.
 
