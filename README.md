@@ -1,12 +1,28 @@
-# SKIN LESION CLASSIFICATION WITH DEEP NEURAL NETWORKS 
+Skin Lesion Classification using Deep Learning
 
-### Introduction:
+Project Description
 
-This project aims to compare the performance of popular deep learning models, Convolutional Neural Network (CNN) and Xception with their added architectural modifications, for image classification on the Ham10000 dataset. The Ham10000 dataset contains 10,015 dermatoscopic images of pigmented skin lesions, which are categorized into seven different types of skin cancer.
+This project implements a deep learning-based computer vision system to automatically classify skin lesions from dermoscopic images. It aims to assist in early detection of skin cancer (e.g., melanoma) using Convolutional Neural Networks (CNNs) and transfer learning.
 
-### Setup:
+Features
 
-The project code is available on GitHub and is implemented in Python using TensorFlow and Keras libraries. The dataset is preprocessed and split into train, validation, and test sets using a 80-10-10 split ratio. The CNN and Xception models are trained on the training set, validated on the validation set, and evaluated on the test set.
+Classifies skin lesions into multiple categories (benign vs malignant or multiple types).
+
+Uses transfer learning with architectures like EfficientNet, ResNet50, or VGG16.
+
+Implements data preprocessing and augmentation for better generalization.
+
+Provides Grad-CAM visualization to highlight areas influencing predictions.
+
+Optionally deployable as a Flask web application.
+
+Dataset
+
+HAM10000 / ISIC 2018/2020 datasets
+
+Contains labeled dermoscopic images of skin lesions.
+
+Preprocessing includes resizing, normalization, and augmentation.
 
 ### Models:
 
@@ -54,11 +70,28 @@ Focal loss function was applied instead of the categorical cross_entropy to impr
 
         Xception + Dropout + Augmentation + class_weights + soft attention + focal loss (Xception3)
 
+Technologies Used
 
-### Results:
+Python
+
+TensorFlow / Keras
+
+OpenCV, NumPy, Pandas
+
+Matplotlib / Seaborn
+
+Google Colab (optional for free GPU)
+
+Flask (optional for deployment)
+
+Results:
 
 After training and evaluating both models, the Xception model (Xception3) outperformed all the other models, achieving a higher accuracy of 85.7% average f1-score of  0.72 This indicates that the pre-trained Xception model, with its advanced architecture, numerous layers, focal loss, dropouts, augmentation and class-weighted is better suited for image classification tasks such as this one.
 
-### Conclusion:
+Future Work
 
-In conclusion, this project highlights the importance of selecting the right deep learning model for image classification tasks. While CNN is a popular choice, more advanced models such as Xception can lead to improved performance and accuracy. It is also important to note that the performance of these models can be further improved by fine-tuning the hyperparameters and addition of soft attention layers.
+Multi-class classification for all lesion types.
+
+Integration with additional datasets for broader detection.
+
+Deploy as a web or mobile application for clinical use.
